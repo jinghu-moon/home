@@ -6,282 +6,292 @@
 /*小于1200px时*/
 @media (max-width: 1200px) {
 
-    /*总布局*/
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm {
-        max-width: 1000px !important;
-    }
+  /*总布局*/
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 1000px !important;
+  }
 
-    .weekday {
-        display: none;
-    }
+  .weekday {
+    display: none;
+  }
 
-    /*音乐播放器*/
-    .music-text {
-        max-width: 170px !important;
-    }
+  /*音乐播放器*/
+  .music-text {
+    max-width: 170px !important;
+  }
 }
 
 /*小于992px时*/
 @media (max-width: 992px) {
 
-    /*总布局*/
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm {
-        max-width: 900px !important;
-    }
+  /*总布局*/
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 900px !important;
+  }
 
-    .col.left {
-        margin-right: 0.75rem;
-    }
+  .col.left {
+    margin-right: 0.75rem;
+  }
 
-    .col.right {
-        margin-left: 0.75rem;
-    }
+  .col.right {
+    margin-left: 0.75rem;
+  }
 
-    /*一言*/
-    .col.hitokotos {
-        display: none;
-    }
+  /*一言*/
+  .col.hitokotos {
+    display: none;
+  }
 
-    /*时间卡片*/
-    .col.times {
-        margin-left: 0rem;
-    }
+  /*时间卡片*/
+  .col.times {
+    margin-left: 0rem;
+  }
 
-    /*日期显示*/
-    .weekday {
-        display: inline;
-    }
+  /*日期显示*/
+  .weekday {
+    display: inline;
+  }
 
-    /*标题文字*/
-    .main-img img {
-        width: 110px;
-    }
+  /*标题文字*/
+  .main-img img {
+    width: 110px;
+  }
 
-    span.img-title {
-        font-size: 4.75rem;
-    }
+  span.img-title {
+    font-size: 4.75rem;
+  }
 
-    span.img-text {
-        font-size: 1.75rem;
-    }
+  span.img-text {
+    font-size: 1.75rem;
+  }
 
-    /*链接卡片文字*/
-    span.link-name {
-        display: none !important;
-    }
+  /*链接卡片文字*/
+  span.link-name {
+    display: none !important;
+  }
 
-    .link-card i {
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-    }
+  .link-card i {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
 }
 
 /*小于840px时*/
 @media (max-width: 840px) {
 
 
-    /*社交链接*/
-    .social {
-        max-width: 100%;
-        justify-content: center;
-    }
+  /*社交链接*/
+  .social {
+    max-width: 100%;
+    justify-content: center;
+  }
 
-    #link-text {
-        display: none !important;
-    }
+  #link-text {
+    display: none !important;
+  }
 
-    .link i {
-        margin: 0px 20px;
-    }
+  .link i {
+    margin: 0px 20px;
+  }
 }
 
 /*小于789px时*/
 @media (max-width: 789px) {
 
-    /*标题文字*/
-    span.img-text {
-        display: none;
-    }
+  /*标题文字*/
+  span.img-text {
+    display: none;
+  }
 }
 
 /*小于768px时*/
 @media (max-width: 768px) {
 
-    /*标题文字*/
-    .main-img img {
-        width: 100px;
-    }
+  /*标题文字*/
+  .main-img img {
+    width: 100px;
+  }
 
-    span.img-title {
-        font-size: 4.5rem;
-    }
+  span.img-title {
+    font-size: 3.6rem;
+  }
+
+  /* 介绍卡片 */
+  .message {
+    margin-top: 3rem;
+  }
+
+  /* 一言高度 */
+  .hitokoto {
+    height: 120px;
+  }
 }
 
 /*小于720px时*/
 @media (max-width: 720px) {
 
-    /*左侧栏高度*/
-    .main-left {
-        transform: translateY(20px);
-    }
+  /*左侧栏高度*/
+  .main-left {
+    transform: translateY(20px);
+  }
 
-    /*左侧栏边距*/
-    .col.left {
-        margin-right: 0rem;
-    }
+  /*左侧栏边距*/
+  .col.left {
+    margin-right: 0rem;
+  }
 
-    /*右侧栏隐藏*/
-    .col.right {
-        display: none;
-    }
+  /*右侧栏隐藏*/
+  .col.right {
+    display: none;
+  }
 
-    /*右侧栏边距*/
-    .col.right {
-        margin-left: 0rem;
-    }
+  /*右侧栏边距*/
+  .col.right {
+    margin-left: 0rem;
+  }
 
-    /*标题文字*/
-    span.img-text {
-        display: inline;
-    }
+  /*标题文字*/
+  span.img-text {
+    display: inline;
+  }
 
-    /*简介*/
-    .message {
-        max-width: 100%;
-        pointer-events: none;
-    }
+  /*简介*/
+  .message {
+    max-width: 100%;
+    pointer-events: none;
+  }
 
-    /*
+  /*
     .des {
         justify-content: space-between;
     }
     */
 
-    /*链接卡片*/
-    .link-card {
-        height: 80px !important;
-        align-items: center !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-    }
+  /*链接卡片*/
+  .link-card {
+    height: 80px !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
 
-    .link-card i {
-        font-size: 1.75rem;
-    }
+  .link-card i {
+    font-size: 1.75rem;
+  }
 
-    span.link-name {
-        display: block !important;
-        font-size: 0.95rem;
-    }
+  span.link-name {
+    display: block !important;
+    font-size: 0.95rem;
+  }
 
-    span.line-text,
-    i.iconfont.icon-link {
-        font-size: 1.05rem;
-    }
+  span.line-text,
+  i.iconfont.icon-link {
+    font-size: 1.05rem;
+  }
 
-    /*菜单栏按钮*/
-    .menu {
-        display: flex;
-        justify-content: center;
-        position: fixed;
-        top: 84%;
-    }
+  /*菜单栏按钮*/
+  .menu {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 84%;
+  }
 
-    .munu-button {
-        padding: 5px 20px;
-        background: rgb(0 0 0 / 20%);
-        backdrop-filter: blur(10px);
-        border-radius: 6px;
-        font-size: 1.25rem;
-        transition: 0.5s;
-        width: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 40px;
-    }
+  .munu-button {
+    padding: 5px 20px;
+    background: rgb(0 0 0 / 20%);
+    backdrop-filter: blur(10px);
+    border-radius: 6px;
+    font-size: 1.25rem;
+    transition: 0.5s;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+  }
 
-    /*页脚文字*/
-    footer {
-        font-size: 0.85rem;
-    }
+  /*页脚文字*/
+  footer {
+    font-size: 0.85rem;
+  }
 
-    /*一言*/
-    .col.hitokotos {
-        margin-right: 0rem;
-    }
+  /*一言*/
+  .col.hitokotos {
+    margin-right: 0rem;
+  }
 
-    .hitokoto-text,
-    .hitokoto-from {
-        font-size: 1.05rem;
-    }
+  .hitokoto-text,
+  .hitokoto-from {
+    font-size: 1.05rem;
+  }
 
-    /*音乐播放器*/
-    .music-text {
-        max-width: 100% !important;
-    }
+  /*音乐播放器*/
+  .music-text {
+    max-width: 100% !important;
+  }
 
-    #music-name {
-        font-size: 1.05rem;
-    }
+  #music-name {
+    font-size: 1.05rem;
+  }
 
-    #music-open {
-        display: none;
-    }
+  #music-open {
+    display: none;
+  }
 
-    /*隐藏鼠标样式*/
-    #cursor {
-        background: transparent !important;
-    }
+  /*隐藏鼠标样式*/
+  #cursor {
+    background: transparent !important;
+  }
 
 }
 
 /*小于390px时*/
 @media (max-width: 390px) {
-    .main-img img {
-        display: none;
-    }
+  .main-img img {
+    display: none;
+  }
 }
 
 /* 大于568px时 */
 @media (min-width: 568px) {
-    .iziToast {
-        border-radius: 30px !important;
-    }
+  .iziToast {
+    border-radius: 30px !important;
+  }
 }
 
 
 /* 大于720px时 */
 @media (min-width: 720px) {
-    .menu {
-        display: none !important;
-    }
+  .menu {
+    display: none !important;
+  }
 }
 
 /* 大于992px时 */
 @media (min-width: 992px) {
 
-    /*时钟显示*/
-    span#win_text,
-    span#win_speed {
-        display: none;
-    }
+  /*时钟显示*/
+  span#win_text,
+  span#win_speed {
+    display: none;
+  }
 }
 
 /* 大于1400px时 */
 @media (min-width: 1400px) {
 
-    /*时钟显示*/
-    span#win_text,
-    span#win_speed {
-        display: inline !important;
-    }
+  /*时钟显示*/
+  span#win_text,
+  span#win_speed {
+    display: inline !important;
+  }
 }
 
 
@@ -289,44 +299,44 @@
 菜单按钮
 */
 .menus .col.left {
-    display: none;
+  display: none;
 }
 
 .menus .col.right {
-    display: block !important;
-    transition: 0.5s;
-    padding: 0rem 0.75rem;
+  display: block !important;
+  transition: 0.5s;
+  padding: 0rem 0.75rem;
 }
 
 /*功能区调整*/
 .menus .col.hitokotos {
-    display: block;
+  display: block;
 }
 
 .menus .col.times {
-    display: none;
+  display: none;
 }
 
 /*边界布局*/
 .menus .row {
-    --bs-gutter-x: 0rem;
+  --bs-gutter-x: 0rem;
 }
 
 .menus .col.\32 {
-    margin: 0 0.75rem;
+  margin: 0 0.75rem;
 }
 
 .menus .logo {
-    display: inline !important;
-    text-align: center;
-    position: fixed;
-    top: 8%;
-    font-size: 1.75rem;
+  display: inline !important;
+  text-align: center;
+  position: fixed;
+  top: 8%;
+  font-size: 1.75rem;
 }
 
 /*第二屏logo*/
 .logo-text {
-    font-family: 'Pacifico-Regular' !important;
+  font-family: 'Pacifico-Regular' !important;
 }
 
 /*切换动画*/
@@ -352,20 +362,20 @@
 .link-card,
 .message,
 #link-text {
-    animation: fade 0.5;
-    -webkit-animation: fade 0.5s;
-    -moz-animation: fade 0.5s;
-    -o-animation: fade 0.5s;
-    -ms-animation: fade 0.5s;
+  animation: fade 0.5;
+  -webkit-animation: fade 0.5s;
+  -moz-animation: fade 0.5s;
+  -o-animation: fade 0.5s;
+  -ms-animation: fade 0.5s;
 }
 
 /*
 移动端功能区切换
 */
 .mobile .col.hitokotos {
-    display: none;
+  display: none;
 }
 
 .mobile .col.times {
-    display: block;
+  display: block;
 }
