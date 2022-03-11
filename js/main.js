@@ -88,6 +88,15 @@ fetch('https://v1.hitokoto.cn?max_length=24')
     })
     .catch(console.error)
 
+// 获取今日诗词
+fetch('https://sdk.jinrishici.com/v2/browser/jinrishici.js')
+jinrishici.load(function(result) {
+    var sentence = document.querySelector("#poem_sentence")
+    var info = document.querySelector("#poem_info")
+    sentence.innerHTML = result.data.content
+    info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+    });
+
 //获取天气
 fetch('https://www.yiketianqi.com/free/day?appid=43986679&appsecret=TksqGZT7&unescape=1')
     .then(response => response.json())
