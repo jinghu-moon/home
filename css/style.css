@@ -41,10 +41,13 @@ a:hover {
 }
 
 #section {
-  /*background-image: url(https://api.ixiaowai.cn/gqapi/gqapi.php), url(../img/background.jpg);*/
-  background-image: url("https://api.dujin.org/bing/1920.php"), url("../img/background.jpg");
+  /* 必应壁纸接口 */
+  /* background-image: url("https://7ed.net/bing/api?rand=false&day=0&cn=true"), url("../img/background.webp"); */
+  background-image: url("https://imgapi.cn/bing.php"), url("../img/background.webp");
+  /* background-image: url("https://api.ixiaowai.cn/gqapi/gqapi.php"), url("../img/background.jpg"); */
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
+  background-size: cover;
 }
 
 .noscript {
@@ -163,8 +166,8 @@ span.img-text {
 }
 
 span#change {
-  /* font-family: 'Pacifico-Regular' !important; */
-  font-size: 1.2rem;
+  font-family: 'Pacifico-Regular' !important;
+  font-size: 1.1rem;
   font-weight: bolder;
 }
 

@@ -246,7 +246,7 @@ $("#switchmore").on("click", function () {
   if (shoemore && $(document).width() >= 990) {
     $("#container").attr("class", "container mores");
     $("#change").html("Oops&nbsp;!");
-    $("#change1").html("哎呀，这都被你发现了（ 再点击一次可关闭 ）");
+    $("#change1").html("哎呀呀，这都被你发现了（ 再点击一次可关闭 ）");
   } else {
     $("#container").attr("class", "container");
     $("#change").html("Hello&nbsp;World&nbsp;!");

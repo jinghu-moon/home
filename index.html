@@ -15,6 +15,8 @@
   <title>镜湖月的个人主页</title>
   <!-- jQuery -->
   <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Typed.js -->
+  <script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
   <!-- 引入样式 -->
   <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/bootstrap/5.1.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css">
@@ -85,8 +87,20 @@
                 <div class="des" id="des">
                   <i class="iconfont icon-yinhao-copy-copy"></i>
                   <div class="des-title">
-                    <span id="change">Hello&nbsp;World&nbsp;!</span><br /><span
-                      id="change1">一个基于兴趣建立的网站，或许会一直存在下去。</span>
+                    <span id="change" style="position: absolute;top: 30px;left: 50px;">Hello&nbsp;World&nbsp;!</span>
+                    <br />
+                    <span class="element" id="change1"></span>
+                    <script>
+                      var typed = new Typed(".element", {
+                        strings: ["一个基于兴趣建立的网站，或许会一直存在下去。"],  //输入内容, 支持html标签
+                        startDelay: 1500,         //开始延迟
+                        typeSpeed: 75,            //打字速度，数字越大，速度越慢。
+                        backSpeed: 75,            //回退速度
+                        loop: false,              //是否循环
+                        showCursor: true,         //显示游标
+                        cursorChar: '_',          //游标样式
+                      });
+                    </script>
                   </div>
                   <i class="iconfont icon-yinhao-copy"></i>
                 </div>
@@ -96,10 +110,10 @@
                 <a href="https://github.com/jinghu-moon" class="link" id="github" target="_blank">
                   <i class="iconfont icon-github"></i>
                 </a>
-                <a href="http://wpa.qq.com/msgrd?v=3&uin=2027004326&site=qq&menu=yes" class="link" id="qq"
+                <!-- <a href="http://wpa.qq.com/msgrd?v=3&uin=2027004326&site=qq&menu=yes" class="link" id="qq"
                   target="_blank">
                   <i class="iconfont icon-QQ"></i>
-                </a>
+                </a> -->
                 <a href="mailto:khi1215215@163.com" class="link" id="email">
                   <i class="iconfont icon-youxiang"></i>
                 </a>
@@ -148,8 +162,8 @@
                       </div>
                     </div> -->
                     <div class="hitokoto-all">
-                      <div class="sentence-source">&thinsp;<i class="iconfont icon-xinxi1"></i>&nbsp;<a href="https://www.jinrishici.com/"
-                          target="_blank">今日诗词</a>
+                      <div class="sentence-source">&thinsp;<i class="iconfont icon-xinxi1"></i>&nbsp;<a
+                          href="https://www.jinrishici.com/" target="_blank">今日诗词</a>
                       </div>
                       <div class="hitokoto-text">
                         <span id="poem_sentence">仰天大笑出门去，我辈岂是蓬蒿人。</span>
@@ -440,8 +454,9 @@
   <script type="text/javascript" src="./js/main.js"></script>
   <script type="text/javascript" src="./js/time.js"></script>
   <script type="text/javascript" src="./js/cursor.js"></script>
+  <script type="text/javascript" src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
   <script type="text/javascript" src="https://cdn.staticfile.org/bootstrap/5.1.0/js/bootstrap.min.js"></script>
-  <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 </body>
 
 </html>
