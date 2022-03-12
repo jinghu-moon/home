@@ -34,6 +34,15 @@
     url('../font/font_2831425_x34rhwyvdnp.ttf') format('truetype');
 }
 
+/* 自定义图标 */
+@font-face {
+  font-family: 'my-iconfont';
+  /* Project id 3240457 */
+  src: url('../font/font_3240457_n5o1yg39mw9.woff2?t=1647012233963') format('woff2'),
+    url('../font/font_3240457_n5o1yg39mw9.woff?t=1647012233963') format('woff'),
+    url('../font/font_3240457_n5o1yg39mw9.ttf?t=1647012233963') format('truetype');
+}
+
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;

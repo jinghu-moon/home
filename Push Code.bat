@@ -1,7 +1,7 @@
 @echo off
 echo ================================ Begin ================================
 echo=
-set Default_msg=更新博客
+set Default_msg=更新主页
 set "Input_msg="
 set "Submit_msg="
 echo  (1) 拉取远端文件
