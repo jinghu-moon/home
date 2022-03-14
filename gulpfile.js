@@ -1,18 +1,51 @@
 //用到的插件
 var gulp = require("gulp");
-var cleanCSS = require("gulp-clean-css"); // 压缩 CSS
+// 删除文件
+var del = require("del");
+// 压缩 CSS
+var cleanCSS = require("gulp-clean-css");
 // 压缩 HTML
 var htmlmin = require("gulp-html-minifier-terser");
 var htmlclean = require("gulp-htmlclean");
-var terser = require("gulp-terser"); // gulp-tester，压缩 JS
-var clean = require("gulp-clean"); //清理文件或文件夹
-const { parallel } = require("gulp");
-// const changed = require("gulp-changed"); // 仅传递已更改的文件
+// gulp-tester，压缩 JS
+var terser = require("gulp-terser");
+// 合并文件
+var concat = require("gulp-concat");
+// var order = require("gulp-order");
+// js、css请求合并
+var useref = require("gulp-useref");
 
-// gulp.task("clean-public", function () {
-//   return gulp.src("./public/**/*", { read: false }).pipe(clean());
-// });
+// 请求合并
+gulp.task("unite", function () {
+  return gulp.src("./public/index.html").pipe(useref()).pipe(gulp.dest("./public"));
+});
 
+// 清除
+gulp.task("clean", function () {
+  return del([
+    "./public/**/*",
+    "./public/*.html",
+    "./js/all.js",
+    "./css/all.css",
+    "!./public/.git",
+    "!./public/Push.bat"
+  ]);
+});
+
+// 合并
+gulp.task("concat", function (done) {
+  gulp
+    .src("./js/*.js") //要合并的文件
+    .pipe(concat("all.js")) // 合并匹配到的js文件并命名为 "all.js"
+    .pipe(gulp.dest("./js"));
+  gulp
+    .src("./css/*.css") //要合并的文件
+    .pipe(concat("all.css")) // 合并匹配到的css文件并命名为 "all.css"
+    .pipe(gulp.dest("./css"));
+  done();
+});
+
+// 复制
 gulp.task("copy", (done) => {
   gulp
     .src(["img/*.png", "img/*.jpg", "img/*.svg", "img/*.ico", "img/*.webp"])
@@ -20,7 +53,10 @@ gulp.task("copy", (done) => {
   gulp
     .src(["font/*.ttf", "font/*.woff", "font/*.woff2", "font*.otf"])
     .pipe(gulp.dest("./public/font"));
-    done();
+    gulp
+    .src(["index.html"])
+    .pipe(gulp.dest("./public/"));
+  done();
 });
 
 // 压缩js
@@ -48,11 +84,11 @@ gulp.task("css-min", function () {
 //压缩html
 gulp.task("html-min", function () {
   return gulp
-    .src("*.html")
+    .src("./public/index.html")
     .pipe(htmlclean())
     .pipe(
       htmlmin({
-        removeComments: true, //清除html注释
+        removeComments: false, //清除html注释
         collapseWhitespace: true, //压缩html
         collapseBooleanAttributes: true,
         //省略布尔属性的值，例如：<input checked="true"/> ==> <input />
@@ -70,7 +106,48 @@ gulp.task("html-min", function () {
     .pipe(gulp.dest("./public"));
 });
 
+//压缩字体
+// function minifyFont(text, cb) {
+//   gulp
+//     .src("./public/font/*.ttf") //原字体所在目录
+//     .pipe(
+//       fontmin({
+//         text: text,
+//       })
+//     )
+//     .pipe(gulp.dest("./public/font")) //压缩后的输出目录
+//     .on("end", cb);
+// }
+
+// gulp.task("font-min", (cb) => {
+//   var buffers = [];
+//   gulp
+//     .src(["./public/*.html"]) //HTML文件所在目录请根据自身情况修改
+//     .on("data", function (file) {
+//       buffers.push(file.contents);
+//     })
+//     .on("end", function () {
+//       var text = Buffer.concat(buffers).toString("utf-8");
+//       minifyFont(text, cb);
+//     });
+// });
+
+// 按顺序进行任务
 gulp.task(
   "default",
-    gulp.parallel("js-min", "css-min", "html-min", "copy"),
+  gulp.series(
+    "clean",
+    "copy",
+    "concat",
+    "js-min",
+    "css-min",
+    "unite",
+    "html-min"
+  )
 );
+
+//同时进行任务
+// gulp.task(
+//   "default",
+//     gulp.parallel("js-min", "css-min", "html-min", "copy"),
+// );

@@ -88,27 +88,28 @@ if ((isFirefox = navigator.userAgent.indexOf("Firefox") > 0)) {
   );
 }
 
-//获取一言
-fetch("https://v1.hitokoto.cn?max_length=24")
-  .then((response) => response.json())
-  .then((data) => {
-    $("#hitokoto_text").text(data.hitokoto);
-    $("#from_text").text(data.from);
+// 获取一言
+fetch("https://v1.hitokoto.cn?max_length=24&c=d&c=e&c=h&c=k&c=h")
+  .then((t) => t.json())
+  .then((t) => {
+    $("#hitokoto_text").text(t.hitokoto), $("#from_text").text(t.from);
   })
   .catch(console.error);
 
-//获取天气
+// 获取天气
 fetch(
-  "https://www.yiketianqi.com/free/day?appid=87464273&appsecret=PKkjq6CS&unescape=1"
+  "https://www.yiketianqi.com/free/day?appid=47343665&appsecret=dABM2QxS&unescape=1"
 )
+// https://www.yiketianqi.com/free/day?appid=47343665&appsecret=dABM2QxS&unescape=1
+// https://www.yiketianqi.com/free/day?appid=87464273&appsecret=hWYnoPm8&unescape=1
   .then((response) => response.json())
   .then((data) => {
-    $("#wea_text").text(data.wea);
     $("#city_text").text(data.city);
+    $("#wea_text").text(data.wea);
     $("#tem_night").text(data.tem_night);
     $("#tem_day").text(data.tem_day);
-    $("#win_text").text(data.win);
-    $("#win_speed").text(data.win_speed);
+    // $("#win_text").text(data.win);
+    // $("#win_speed").text(data.win_speed);
   })
   .catch(console.error);
 
@@ -122,15 +123,7 @@ function time() {
   var y = dt.getYear() + 1900;
   var mm = dt.getMonth() + 1;
   var d = dt.getDate();
-  var weekday = [
-    "周日",
-    "周一",
-    "周二",
-    "周三",
-    "周四",
-    "周五",
-    "周六",
-  ];
+  var weekday = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
   var day = dt.getDay();
   var h = dt.getHours();
   var m = dt.getMinutes();
@@ -265,10 +258,10 @@ $("#switchmenu").on("click", function () {
   switchmenu = !switchmenu;
   if (switchmenu) {
     $("#row").attr("class", "row menus");
-    $("#menu").html("<i class='iconfont icon-times'></i>");
+    $("#menu").html("<i class='iconfont icon-cuowu'></i>");
   } else {
     $("#row").attr("class", "row");
-    $("#menu").html("<i class='iconfont icon-bars'>");
+    $("#menu").html("<i class='iconfont icon-liebiao'>");
   }
 });
 

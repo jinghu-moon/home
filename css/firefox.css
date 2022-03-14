@@ -1,5 +1,5 @@
 #section {
-    background-image: url("../img/background.jpg") !important;
+  background-image: url("../img/background.jpg") !important;
 }
 
 .message,
@@ -10,13 +10,13 @@
 .more,
 .box-wrapper,
 footer {
-    background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .link-card:hover {
-    background: rgb(0, 0, 0, 0.6);
+  background: rgb(0, 0, 0, 0.6);
 }
 
 .progress {
-    background: rgba(0, 0, 0, 0.5) !important;
+  background: rgba(0, 0, 0, 0.5) !important;
 }

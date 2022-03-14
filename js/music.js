@@ -412,7 +412,7 @@ const ap = new APlayer({
 
 /* 底栏歌词 */
 setInterval(function () {
-    $("#lrc").html("<span class='lrc-show'><i class='iconfont icon-music'></i> " + $(".aplayer-lrc-current").text() + " <i class='iconfont icon-music'></i></span>");
+    $("#lrc").html("<span class='lrc-show'><i class='iconfont icon-yinle1'></i> " + $(".aplayer-lrc-current").text() + " <i class='iconfont icon-yinle1'></i></span>");
 }, 500);
 
 /* 音乐通知及控制 */
@@ -424,7 +424,7 @@ ap.on('play', function () {
         displayMode: 'replace',
         message: music
     });
-    $("#play").html("<i class='iconfont icon-pause'>");
+    $("#play").html("<i class='iconfont icon-pause2'>");
     $("#music-name").html($(".aplayer-title").text() + $(".aplayer-author").text());
     if ($(document).width() >= 990) {
         $('.power').css("cssText", "display:none");
@@ -433,7 +433,7 @@ ap.on('play', function () {
 });
 
 ap.on('pause', function () {
-    $("#play").html("<i class='iconfont icon-play'>");
+    $("#play").html("<i class='iconfont icon-play-copy'>");
     if ($(document).width() >= 990) {
         $('#lrc').css("cssText", "display:none !important");
         $('.power').css("cssText", "display:block");
@@ -445,13 +445,13 @@ function changevolume() {
     var x = $("#volume").val();
     ap.volume(x, true);
     if (x == 0) {
-        $("#volume-ico").html("<i class='iconfont icon-volume-x'></i>");
+        $("#volume-ico").html("<i class='iconfont icon-Mute'></i>");
     } else if (x > 0 && x <= 0.3) {
-        $("#volume-ico").html("<i class='iconfont icon-volume'></i>");
+        $("#volume-ico").html("<i class='iconfont icon-icon-yinliang-xiaosheng'></i>");
     } else if (x > 0.3 && x <= 0.6) {
-        $("#volume-ico").html("<i class='iconfont icon-volume-1'></i>");
+        $("#volume-ico").html("<i class='iconfont icon-icon-yinliang-xiaosheng'></i>");
     } else {
-        $("#volume-ico").html("<i class='iconfont icon-volume-2'></i>");
+        $("#volume-ico").html("<i class='iconfont icon-shengyinda1'></i>");
     }
 }
 

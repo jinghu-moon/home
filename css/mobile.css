@@ -115,11 +115,16 @@
 
   /*标题文字*/
   .main-img img {
-    width: 100px;
+    width: 90px;
+    margin-left: 10px;
   }
 
   span.img-title {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
+  }
+
+  span.img-text {
+    font-size: 2.5rem;
   }
 
   /* 介绍卡片 */

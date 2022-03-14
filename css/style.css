@@ -1,6 +1,5 @@
 @charset"utf-8";
 
-
 /*全局样式*/
 html,
 body {
@@ -42,6 +41,7 @@ a:hover {
 
 #section {
   /* 必应壁纸接口 */
+  /* background-image: url("https://api.dujin.org/bing/1920.php"),url("../img/background.webp"); */
   /* background-image: url("https://7ed.net/bing/api?rand=false&day=0&cn=true"), url("../img/background.webp"); */
   background-image: url("https://imgapi.cn/bing.php"), url("../img/background.webp");
   /* background-image: url("https://api.ixiaowai.cn/gqapi/gqapi.php"), url("../img/background.jpg"); */
@@ -96,8 +96,7 @@ main {
 }
 
 .main-left {
-  /*transform: translateY(240px);*/
-  transform: translateY(40px);
+  transform: translateY(20px);
 }
 
 .row.rightone {
@@ -113,17 +112,17 @@ main {
 
 .main-img img {
   border-radius: 50%;
-  width: 110px;
+  width: 120px;
 }
 
-.main-img img:hover {
+/* .main-img img:hover {
   transform: rotate(360deg);
-}
+} */
 
 .img-title {
   width: 100%;
-  margin-left: 12px;
-  transform: translateY(-8%);
+  margin-left: 10px;
+  transform: translateY(6%);
 }
 
 .img-title-author {
@@ -134,11 +133,11 @@ main {
 span.img-title {
   font-size: 4.5rem;
   font-family: 'Pacifico-Regular' !important;
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 span.img-text {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-family: 'Pacifico-Regular' !important;
 }
 
@@ -162,17 +161,18 @@ span.img-text {
 .des-title {
   margin: 1rem 1rem;
   line-height: 2rem;
-  /*font-size: 1.10rem;*/
+  /* font-size: 1.20rem;
+  font-weight: bold; */
 }
+
+/* .msg {
+  font-family: "message","LXGWWenKai";
+} */
 
 span#change {
   font-family: 'Pacifico-Regular' !important;
   font-size: 1.1rem;
   font-weight: bolder;
-}
-
-i.iconfont.icon-yinhao-copy {
-  align-self: flex-end;
 }
 
 /*社交链接*/
@@ -310,9 +310,9 @@ i.iconfont.icon-yinhao-copy {
   align-items: center;
 }
 
-i.iconfont.icon-play,
-i.iconfont.icon-pause {
-  font-size: 2.25rem;
+i.icon-xiayishou1-copy,
+i.icon-xiayishou1 {
+  font-size: 1.88rem;
   padding: 6px;
   border-radius: 6px;
 }
@@ -445,8 +445,8 @@ span.time-text {
 }
 
 span.line-text {
-  font-weight: bolder;
-  font-size: 1.2rem;
+  font-family: "三极古拙楷书简";
+  font-size: 1.3rem;
   margin: 0px 6px;
 }
 
