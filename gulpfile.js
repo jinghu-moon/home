@@ -17,7 +17,10 @@ var useref = require("gulp-useref");
 
 // 请求合并
 gulp.task("unite", function () {
-  return gulp.src("./public/index.html").pipe(useref()).pipe(gulp.dest("./public"));
+  return gulp
+    .src("./public/index.html")
+    .pipe(useref())
+    .pipe(gulp.dest("./public"));
 });
 
 // 清除
@@ -28,19 +31,19 @@ gulp.task("clean", function () {
     "./js/all.js",
     "./css/all.css",
     "!./public/.git",
-    "!./public/Push.bat"
+    "!./public/Push.bat",
   ]);
 });
 
-// 合并
+// css、js合并
 gulp.task("concat", function (done) {
   gulp
     .src("./js/*.js") //要合并的文件
-    .pipe(concat("all.js")) // 合并匹配到的js文件并命名为 "all.js"
+    .pipe(concat("all.js")) // 合并匹配到的js文件，并命名为 "all.js"
     .pipe(gulp.dest("./js"));
   gulp
     .src("./css/*.css") //要合并的文件
-    .pipe(concat("all.css")) // 合并匹配到的css文件并命名为 "all.css"
+    .pipe(concat("all.css")) // 合并匹配到的css文件，并命名为 "all.css"
     .pipe(gulp.dest("./css"));
   done();
 });
@@ -53,9 +56,7 @@ gulp.task("copy", (done) => {
   gulp
     .src(["font/*.ttf", "font/*.woff", "font/*.woff2", "font*.otf"])
     .pipe(gulp.dest("./public/font"));
-    gulp
-    .src(["index.html"])
-    .pipe(gulp.dest("./public/"));
+  gulp.src(["index.html"]).pipe(gulp.dest("./public/"));
   done();
 });
 
@@ -106,32 +107,6 @@ gulp.task("html-min", function () {
     .pipe(gulp.dest("./public"));
 });
 
-//压缩字体
-// function minifyFont(text, cb) {
-//   gulp
-//     .src("./public/font/*.ttf") //原字体所在目录
-//     .pipe(
-//       fontmin({
-//         text: text,
-//       })
-//     )
-//     .pipe(gulp.dest("./public/font")) //压缩后的输出目录
-//     .on("end", cb);
-// }
-
-// gulp.task("font-min", (cb) => {
-//   var buffers = [];
-//   gulp
-//     .src(["./public/*.html"]) //HTML文件所在目录请根据自身情况修改
-//     .on("data", function (file) {
-//       buffers.push(file.contents);
-//     })
-//     .on("end", function () {
-//       var text = Buffer.concat(buffers).toString("utf-8");
-//       minifyFont(text, cb);
-//     });
-// });
-
 // 按顺序进行任务
 gulp.task(
   "default",
@@ -145,9 +120,3 @@ gulp.task(
     "html-min"
   )
 );
-
-//同时进行任务
-// gulp.task(
-//   "default",
-//     gulp.parallel("js-min", "css-min", "html-min", "copy"),
-// );
