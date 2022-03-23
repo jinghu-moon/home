@@ -164,7 +164,8 @@ footer {
 
 @font-face {
   font-family: "LXGWWenKai";
-  src: url('../font/LXGWWenKai-Regular.woff2');
+  src: url('https://cdn.jsdelivr.net/gh/jinghu-moon/Blog_Static_Files@main/font/LXGWWenKai-Regular.woff2'),
+    url('../font/LXGWWenKai-Regular.woff2');
   font-style: normal;
   font-weight: normal;
 }
@@ -470,8 +471,6 @@ footer {
 .icon-yuque-fill:before {
   content: "\eab5";
 }
-
-
 @charset "UTF-8";
 
 .lantern__warpper {

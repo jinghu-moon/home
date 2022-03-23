@@ -98,18 +98,18 @@ fetch("https://v1.hitokoto.cn?max_length=24&c=d&c=e&c=h&c=k&c=h")
 
 // 获取天气
 fetch(
-  "https://www.yiketianqi.com/free/day?appid=47343665&appsecret=dABM2QxS&unescape=1"
+  "https://www.yiketianqi.com/free/day?appid=87464273&appsecret=hWYnoPm8&unescape=1"
 )
-// https://www.yiketianqi.com/free/day?appid=47343665&appsecret=dABM2QxS&unescape=1
-// https://www.yiketianqi.com/free/day?appid=87464273&appsecret=hWYnoPm8&unescape=1
+  // https://www.yiketianqi.com/free/day?appid=47343665&appsecret=dABM2QxS&unescape=1
+  // https://www.yiketianqi.com/free/day?appid=87464273&appsecret=hWYnoPm8&unescape=1
   .then((response) => response.json())
   .then((data) => {
-    $("#city_text").text(data.city);
-    $("#wea_text").text(data.wea);
-    $("#tem_night").text(data.tem_night);
-    $("#tem_day").text(data.tem_day);
-    // $("#win_text").text(data.win);
-    // $("#win_speed").text(data.win_speed);
+    $("#city_text").text(data.city); // 城市
+    $("#wea_text").text(data.wea); // 天气
+    $("#tem_night").text(data.tem_night); // 晚上最低气温
+    $("#tem_day").text(data.tem_day); // 白天最高气温
+    $("#win_text").text(data.win);
+    $("#win_speed").text(data.win_speed);
   })
   .catch(console.error);
 
