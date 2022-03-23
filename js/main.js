@@ -88,6 +88,7 @@ if ((isFirefox = navigator.userAgent.indexOf("Firefox") > 0)) {
   );
 }
 
+<<<<<<< HEAD
 // 获取一言
 fetch("https://v1.hitokoto.cn?max_length=24&c=d&c=e&c=h&c=k&c=h")
   .then((t) => t.json())
@@ -112,6 +113,31 @@ fetch(
     $("#win_speed").text(data.win_speed);
   })
   .catch(console.error);
+=======
+//获取一言
+fetch('https://v1.hitokoto.cn?max_length=24')
+    .then(response => response.json())
+    .then(data => {
+        $('#hitokoto_text').html(data.hitokoto)
+        $('#from_text').html(data.from)
+    })
+    .catch(console.error)
+
+//获取天气
+//每日限量 100 次
+//请前往 https://www.tianqiapi.com/ 申请（免费）
+fetch('https://www.yiketianqi.com/free/day?appid=43986679&appsecret=TksqGZT7&unescape=1')
+    .then(response => response.json())
+    .then(data => {
+        $('#wea_text').html(data.wea)
+        $('#city_text').html(data.city)
+        $('#tem_night').html(data.tem_night)
+        $('#tem_day').html(data.tem_day)
+        $('#win_text').html(data.win)
+        $('#win_speed').html(data.win_speed)
+    })
+    .catch(console.error)
+>>>>>>> upstream/master
 
 //获取时间
 var t = null;
