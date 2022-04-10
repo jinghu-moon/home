@@ -206,7 +206,7 @@ if ((isFirefox = navigator.userAgent.indexOf("Firefox") > 0)) {
 }
 
 //获取一言
-fetch("https://v1.hitokoto.cn?max_length=24&c=d&c=e&c=h&c=k&c=h")
+fetch("https://v1.hitokoto.cn?max_length=35&c=d&c=e&c=h&c=k&c=h")
   .then((response) => response.json())
   .then((data) => {
     $("#hitokoto_text").html(data.hitokoto);
@@ -401,7 +401,7 @@ window.addEventListener("load", function () {
     //关闭移动端样式
     if (window.innerWidth >= 600) {
       $("#row").attr("class", "row");
-      $("#menu").html("<i class='iconfont icon-bars'>");
+      $("#menu").html("<i class='iconfont icon-liebiao'>");
       //移除移动端切换功能区
       $("#rightone").attr("class", "row rightone");
     }
@@ -969,13 +969,13 @@ function changevolume() {
     var x = $("#volume").val();
     ap.volume(x, true);
     if (x == 0) {
-        $("#volume-ico").html("<i class='iconfont icon-Mute'></i>");
+        $("#volume-ico").html("<span class='icon-volume-mute2'></span>");
     } else if (x > 0 && x <= 0.3) {
-        $("#volume-ico").html("<i class='iconfont icon-icon-yinliang-xiaosheng'></i>");
+        $("#volume-ico").html("<span class='icon-volume-low'></span>");
     } else if (x > 0.3 && x <= 0.6) {
-        $("#volume-ico").html("<i class='iconfont icon-icon-yinliang-xiaosheng'></i>");
+        $("#volume-ico").html("<span class='icon-volume-medium'></span>");
     } else {
-        $("#volume-ico").html("<i class='iconfont icon-shengyinda1'></i>");
+        $("#volume-ico").html("<span class='icon-volume-high'></span>");
     }
 }
 

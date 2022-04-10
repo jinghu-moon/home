@@ -961,7 +961,7 @@ div.loaded div.spinner-box {
 
   /* 一言高度 */
   .hitokoto {
-    height: 120px;
+    height: 145px !important;
   }
 }
 
@@ -997,6 +997,8 @@ div.loaded div.spinner-box {
   .message {
     max-width: 100%;
     pointer-events: none;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   /*
@@ -1036,17 +1038,18 @@ div.loaded div.spinner-box {
   }
 
   .munu-button {
-    padding: 5px 20px;
-    background: rgb(0 0 0 / 20%);
+    padding: 0px 20px;
+    background: #0003;
     backdrop-filter: blur(10px);
     border-radius: 6px;
-    font-size: 1.25rem;
+    font-size: 1rem;
     transition: 0.5s;
-    width: 60px;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: 35px;
+    margin-top: 8px;
   }
 
   /*页脚文字*/
@@ -1082,6 +1085,10 @@ div.loaded div.spinner-box {
     background: transparent !important;
   }
 
+  /* 一言高度 */
+  .hitokoto {
+    height: 145px;
+  }
 }
 
 /*小于390px时*/
@@ -2019,4 +2026,41 @@ footer {
 .iziToast>.iziToast-close {
   background: url(https://cdn.jsdelivr.net/gh/imsyy/file/pic/close.png) no-repeat 50% 50% !important;
   background-size: 8px !important;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('../font/volume-icon.ttf');
+  src: url('../font/volume-icon.woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-volume-high:before {
+  content: "\ea26";
+}
+
+.icon-volume-medium:before {
+  content: "\ea27";
+}
+
+.icon-volume-low:before {
+  content: "\ea28";
+}
+
+.icon-volume-mute2:before {
+  content: "\ea2a";
 }

@@ -134,7 +134,7 @@
 
   /* 一言高度 */
   .hitokoto {
-    height: 145px;
+    height: 145px !important;
   }
 }
 
