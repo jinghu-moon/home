@@ -54,7 +54,7 @@ gulp.task("copy", (done) => {
     .src(["img/*.png", "img/*.jpg", "img/*.svg", "img/*.ico", "img/*.webp"])
     .pipe(gulp.dest("./public/img"));
   gulp
-    .src(["font/*.ttf", "font/*.woff", "font/*.woff2", "font*.otf"])
+    .src(["font/*.ttf", "font/*.woff", "font/*.woff2"])
     .pipe(gulp.dest("./public/font"));
   gulp.src(["index.html"]).pipe(gulp.dest("./public/"));
   done();

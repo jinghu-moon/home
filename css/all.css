@@ -164,7 +164,7 @@ footer {
 
 @font-face {
   font-family: "LXGWWenKai";
-  src: url('https://cdn.jsdelivr.net/gh/jinghu-moon/Blog_Static_Files@main/font/LXGWWenKai-Regular.woff2'),
+  src: url('https://cdn1.tianli0.top/gh/jinghu-moon/Blog_Static_Files@main/font/LXGWWenKai-Regular.woff2'),
     url('../font/LXGWWenKai-Regular.woff2');
   font-style: normal;
   font-weight: normal;
@@ -825,7 +825,7 @@ div.loaded div.spinner-box {
     transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
 }
-@charset"utf-8";
+@charset "utf-8";
 
 /*小于1400px时*/
 @media (max-width: 1400px) {}
@@ -1447,6 +1447,15 @@ span#change {
   font-size: 1.05rem;
 }
 
+#hitokoto_text {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
 .hitokoto-from {
   margin-top: 10px;
   font-weight: bold;
@@ -1696,6 +1705,11 @@ span.link-name {
 
 .link-card:hover span.link-name {
   font-size: 1.15rem;
+}
+
+i.iconfont.icon-a-daohangzhiyindingwei-05,
+i.iconfont.icon-z_shangpinheji {
+    font-size: 2rem;
 }
 
 /*更多页面*/

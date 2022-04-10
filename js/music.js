@@ -445,13 +445,13 @@ function changevolume() {
     var x = $("#volume").val();
     ap.volume(x, true);
     if (x == 0) {
-        $("#volume-ico").html("<i class='iconfont icon-Mute'></i>");
+        $("#volume-ico").html("<span class='icon-volume-mute2'></span>");
     } else if (x > 0 && x <= 0.3) {
-        $("#volume-ico").html("<i class='iconfont icon-icon-yinliang-xiaosheng'></i>");
+        $("#volume-ico").html("<span class='icon-volume-low'></span>");
     } else if (x > 0.3 && x <= 0.6) {
-        $("#volume-ico").html("<i class='iconfont icon-icon-yinliang-xiaosheng'></i>");
+        $("#volume-ico").html("<span class='icon-volume-medium'></span>");
     } else {
-        $("#volume-ico").html("<i class='iconfont icon-shengyinda1'></i>");
+        $("#volume-ico").html("<span class='icon-volume-high'></span>");
     }
 }
 
