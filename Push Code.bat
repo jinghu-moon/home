@@ -23,7 +23,7 @@ echo └—————————————————————┘
 echo=
 echo  (3) 提交本地文件
 echo ═══════════════════════════════════════════════════
-echo 输入 0，提交信息默认为更新博客。输入多条提交信息，请用逗号隔开。
+echo 输入 0，提交信息默认为更新主页。输入多条提交信息，请用逗号隔开。
 echo=
 set /p Input_msg=提交信息：
 echo=
