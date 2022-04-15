@@ -64,10 +64,10 @@ gulp.task("copy", (done) => {
 gulp.task(
   "js-min",
   () =>
-    gulp
-      .src(["./js/*.js", "!./js/*.min.js"]) //原文件所在目录
-      .pipe(terser())
-      .pipe(gulp.dest("./public/js")) //压缩输出目录
+  gulp
+  .src(["./js/*.js", "!./js/*.min.js"]) //原文件所在目录
+  .pipe(terser())
+  .pipe(gulp.dest("./public/js")) //压缩输出目录
 );
 
 //压缩css
