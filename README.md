@@ -1,7 +1,13 @@
-<p>
-<strong><h2>無名の主页 </h2></strong>
+## 修改内容
+
+- 增加 `gulpfile.js` 。
+- 样式修改。
+- 使用 staticfile CDN。
+
+## 無名の主页
+
 简单的小主页，原来的看够了，重新弄了一个
-</p>
+
 
 ![無名の主页](https://img.imsyy.top/other/imsyy-home.png)
 
